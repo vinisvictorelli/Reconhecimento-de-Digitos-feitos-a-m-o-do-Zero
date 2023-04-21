@@ -1,7 +1,7 @@
 
 # Reconhecimento de dígitos manuscritos usando redes neurais
 
-Este projeto tem como objetivo treinar uma rede neural a reconhecer dígitos manuscritos. Além disso, o objetivo é entender matematicamente como uma rede neural funciona, portanto não foi uso nenhuma biblioteca para facilicar a construção da rede neural como tensorflow ou pytorch.
+Este projeto tem como objetivo treinar uma rede neural a reconhecer dígitos manuscritos. Entendendendo matematicamente como uma rede neural funciona, assim, não utilizando nenhuma biblioteca para facilicar a construção da rede neural como tensorflow ou pytorch.
 
 ## Dados
 O dataset usado é o [MNIST](http://yann.lecun.com/exdb/mnist/), contendo 60.000 imagens de treinamento e 10.000 imagens de teste de dígitos manuscritos. 

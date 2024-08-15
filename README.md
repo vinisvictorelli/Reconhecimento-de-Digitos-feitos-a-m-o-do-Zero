@@ -1,23 +1,22 @@
+# Handwritten Digit Recognition Using Neural Networks
 
-# Reconhecimento de dígitos manuscritos usando redes neurais
+This project aims to train a neural network to recognize handwritten digits. The goal is to understand the mathematical principles behind how a neural network functions, without using any libraries that simplify the construction of neural networks, such as TensorFlow or PyTorch.
 
-Este projeto tem como objetivo treinar uma rede neural a reconhecer dígitos manuscritos. Entendendendo matematicamente como uma rede neural funciona, assim, não utilizando nenhuma biblioteca para facilicar a construção da rede neural como tensorflow ou pytorch.
+## Data
+The dataset used is [MNIST](http://yann.lecun.com/exdb/mnist/), which contains 60,000 training images and 10,000 test images of handwritten digits.
 
-## Dados
-O dataset usado é o [MNIST](http://yann.lecun.com/exdb/mnist/), contendo 60.000 imagens de treinamento e 10.000 imagens de teste de dígitos manuscritos. 
+## Preprocessing
+The images were read and converted into NumPy arrays. The data was then split into a development set (1,000 examples) and a training set (59,000 examples). The class labels were converted into a one-hot encoded matrix.
 
-## Pré-processamento
-As imagens foram lidas e convertidas em arrays NumPy. Em seguida, os dados foram divididos em um conjunto de desenvolvimento (1000 exemplos) e um conjunto de treinamento (59.000 exemplos). Os rótulos de classe foram convertidos em matriz one-hot encoding.
+## Neural Network
+The neural network consists of an input layer with 784 neurons, each representing one of the pixels of each image in the dataset, a hidden layer with 10 neurons, and an output layer with 10 neurons. The ReLU activation function was used in the hidden layer, and the softmax function was used in the output layer. The optimization algorithm used was gradient descent.
 
-## Rede Neural
-A rede neural consiste em uma camada de entrada com 784 neurônios, cada um representando um dos pixels de cada imagem no dataset, uma camada oculta com 10 neurônios e uma camada de saída com 10 neurônios. A função de ativação ReLU foi usada na camada oculta e a função softmax foi usada na camada de saída. O algoritmo de otimização usado foi o gradient descent.
+## Training
+The neural network was trained with the training data using the backpropagation technique to adjust the weights. The learning rate was set to 0.2, and the number of iterations was set to 500 (If you want to test different values, simply change the values in the `gradient_descent` function on line 135 of the `digitRecognizer.py` file).
 
-## Treinamento
-A rede neural foi treinada com os dados de treinamento usando a técnica de backpropagation para ajustar os pesos. A taxa de aprendizado foi definida como 0,2 e o número de iterações foi definido como 500 (Caso queira testar valores diferentes, basta mudar os valores na função gradient_descent na linha 135 do arquivo digitRecognizer.py).
+## Results
+The accuracy of the neural network on the development set was approximately 85%.
 
-## Resultados
-A acurácia da rede neural no conjunto de desenvolvimento foi de ~85%
-
-## Referências
-- [Curso de Redes Neurais Artificiais do Andrew Ng no Coursera](https://www.coursera.org/learn/neural-networks-deep-learning)
-- [Página do MNIST](http://yann.lecun.com/exdb/mnist/)
+## References
+- [Andrew Ng's Neural Networks and Deep Learning Course on Coursera](https://www.coursera.org/learn/neural-networks-deep-learning)
+- [MNIST Homepage](http://yann.lecun.com/exdb/mnist/)
